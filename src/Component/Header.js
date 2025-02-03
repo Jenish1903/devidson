@@ -1,52 +1,61 @@
-import React from "react";
-import { FaFacebookF } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaPhoneAlt } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
-  console.log("jenish");
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <>
       <div>
-        <div class="container">
-          <div className="mt-12">
-            <nav>
-              <div class="logo">
-                <img src="../Assets/logomain.png" alt="headerlogo" />
-              </div>
-              <div class="menu">
-                <ul>
-                  <li>
-                    <a href="/src/index.html">Home</a>
-                  </li>
-                  <li>
-                    <a href="/src/Menu.html">Menu</a>
-                  </li>
-                  <li>
-                    <a href="/src/About.html">About Us</a>
-                  </li>
-                  <li>
-                    <a href="/src/Tour.html">Gallery</a>
-                  </li>
-                  <li>
-                    <a href="/src/Services.html">Services</a>
-                  </li>
-                  <li>
-                    <a href="/src/Contact.html">Contact Us</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </nav>
-          </div>
+        <div className="mt-8 navbar">
+          <nav className="nav-container">
+            <div className="logo">
+              <img src="../Assets/logomain.png" alt="headerlogo" />
+            </div>
+            <div className={`menu ${menuOpen ? "active" : ""}`}>
+              <ul>
+                <li>
+                  <Link to="/" onClick={() => setMenuOpen(false)}>
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/about" onClick={() => setMenuOpen(false)}>
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/project" onClick={() => setMenuOpen(false)}>
+                    Projects
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/gallery" onClick={() => setMenuOpen(false)}>
+                    Gallery
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/blog" onClick={() => setMenuOpen(false)}>
+                    Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" onClick={() => setMenuOpen(false)}>
+                    Contact Us
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="hamburger" onClick={toggleMenu}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </nav>
         </div>
       </div>
     </>

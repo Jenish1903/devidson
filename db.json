@@ -1,0 +1,152 @@
+{
+    "gallery": [
+        {
+            "id": 1,
+            "title": "Grilled Roast Meat",
+            "image": "/Assets/g1.png"
+        },
+        {
+            "id": 2,
+            "title": "Grilled Roast Meat",
+            "image": "/Assets/g2.png"
+        },{
+            "id": 3,
+            "title": "Grilled Roast Meat",
+            "image": "/Assets/g3.png"
+        },{
+            "id": 4,
+            "title": "Grilled Roast Meat",
+            "image": "/Assets/g4.png"
+        },{
+            "id": 5,
+            "title": "Grilled Roast Meat",
+            "image": "/Assets/g5.png"
+        },{
+            "id": 6,
+            "title": "Grilled Roast Meat",
+            "image": "/Assets/g6.png"
+        },{
+            "id": 7,
+            "title": "Grilled Roast Meat",
+            "image": "/Assets/g7.png"
+        },{
+            "id": 8,
+            "title": "Grilled Roast Meat",
+            "image": "/Assets/g8.png"
+        },{
+            "id": 9,
+            "title": "Grilled Roast Meat",
+            "image": "/Assets/g9.png"
+        },{
+            "id": 10,
+            "title": "Grilled Roast Meat",
+            "image": "/Assets/g10.png"
+        },{
+            "id": 11,
+            "title": "Grilled Roast Meat",
+            "image": "/Assets/g11.png"
+        },{
+            "id": 12,
+            "title": "Grilled Roast Meat",
+            "image": "/Assets/g5.png"
+        }
+        
+    ],
+    
+    "blogs": [
+        {
+            "id": 1,
+            "title": "By Admin - December 23th 2020",
+            "description": "Doloribus molestiae et sed eos eveniet sunt qui aut quasi",
+            "image": "/Assets/b1.png"
+        },
+        {
+            "id": 2,
+            "title": "By Admin - December 23th 2020",
+            "description": "Doloribus molestiae et sed eos eveniet sunt qui aut quasi",
+            "image": "/Assets/b2.png"
+        },{
+            "id": 3,
+            "title": "By Admin - December 23th 2020",
+            "description": "Doloribus molestiae et sed eos eveniet sunt qui aut quasi",
+            "image": "/Assets/b3.png"
+        },{
+            "id": 4,
+            "title": "By Admin - December 23th 2020",
+            "description": "Doloribus molestiae et sed eos eveniet sunt qui aut quasi",
+            "image": "/Assets/b4.png"
+        },{
+            "id": 5,
+            "title": "By Admin - December 23th 2020",
+            "description": "Doloribus molestiae et sed eos eveniet sunt qui aut quasi",
+            "image": "/Assets/b5.png"
+        },{
+            "id": 6,
+            "title": "By Admin - December 23th 2020",
+            "description": "Doloribus molestiae et sed eos eveniet sunt qui aut quasi",
+            "image": "/Assets/b6.png"
+        },{
+            "id": 7,
+            "title": "By Admin - December 23th 2020",
+            "description": "Doloribus molestiae et sed eos eveniet sunt qui aut quasi",
+            "image": "/Assets/b7.png"
+        },{
+            "id": 8,
+            "title": "By Admin - December 23th 2020",
+            "description": "Doloribus molestiae et sed eos eveniet sunt qui aut quasi",
+            "image": "/Assets/b8.png"
+        },{
+            "id": 9,
+            "title": "By Admin - December 23th 2020",
+            "description": "Doloribus molestiae et sed eos eveniet sunt qui aut quasi",
+            "image": "/Assets/b9.png"
+        },{
+            "id": 10,
+            "title": "By Admin - December 23th 2020",
+            "description": "Doloribus molestiae et sed eos eveniet sunt qui aut quasi",
+            "image": "/Assets/b9.png"
+        },{
+            "id": 11,
+            "title": "By Admin - December 23th 2020",
+            "description": "Doloribus molestiae et sed eos eveniet sunt qui aut quasi",
+            "image": "/Assets/b10.png"
+        },{
+            "id": 12,
+            "title": "By Admin - December 23th 2020",
+            "description": "Doloribus molestiae et sed eos eveniet sunt qui aut quasi",
+            "image": "/Assets/b11.png"
+        }
+        
+    ],
+
+    "projects" :[
+        {
+          "id": 1,
+          "img": "../Assets/img-1.png",
+          "date": "Jan 20, 2020",
+          "title": "Nicoll Townhouse",
+          "description":"Reprehenderit nulla eu ad et erit nulla eu ad eterit nulla eu ad et"
+        },
+        {
+          "id": 2,
+          "img": "../Assets/img-2.png",
+          "date": "Jan 18, 2020",
+          "title": "Minus Deleniti",
+          "description":"Reprehenderit nulla eu ad et erit nulla eu ad eterit nulla eu ad et"
+        },
+        {
+          "id": 3,
+          "img": "../Assets/img-3.png",
+          "date": "Jan 15, 2020",
+          "title": "Consequatur Dolorres",
+          "description":"Reprehenderit nulla eu ad et erit nulla eu ad eterit nulla eu ad et"
+        },
+        {
+          "id": 4,
+          "img": "../Assets/img-4.png",
+          "date": "Jan 10, 2020",
+          "title": "Another Project",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        }
+      ]
+}

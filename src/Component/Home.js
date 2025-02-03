@@ -1,13 +1,14 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { GoPlus } from "react-icons/go";
-
+import Footer from "./Footer";
+import Swiperexample from "./Swiperexample";
 function Home() {
   return (
     <>
-      <div className="container">
-        <div className="backgroundimage">
-          <div className="grid grid-cols-2 pt-40 m-8">
+      <div className="backgroundimage">
+        <div className="container ">
+          <div className="grid grid-cols-2 pt-40 m-8 herosection">
             <div className=" text-white">
               <h1 className="[font:normal_normal_normal_52px/65px_Montserrat] tracking-[0.44px]">
                 Find Your <span className="text-[#2596be]">Place</span> Of Dream
@@ -52,50 +53,50 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-[55%] ml-28">
-              <div>
-                <button class="mr-3 ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <div className="w-[55%] ml-28 heroright">
+              <div className="">
+                <button className="mr-3 ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                   For Rent
                 </button>
-                <button class="bg-blue-300 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <button className="bg-blue-300 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                   For Sale
                 </button>
               </div>
               <div className="bg-white rounded p-5">
-                <div class="mb-4">
+                <div className="mb-4">
                   <label
-                    class="block text-gray-700 text-sm font-bold mb-2"
+                    className="block text-gray-700 text-sm font-bold mb-2"
                     for="username"
                   >
                     Username
                   </label>
                   <input
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="username"
                     type="text"
                     placeholder="Enter an address, State, City or Zip Code"
                   />
                 </div>
-                <div class="mb-4">
+                <div className="mb-4">
                   <label
-                    class="block text-gray-700 text-sm font-bold mb-2"
+                    className="block text-gray-700 text-sm font-bold mb-2"
                     for="username"
                   >
                     Property Category
                   </label>
-                  <div class="grid shrink-0 grid-cols-1 focus-within:relative">
+                  <div className="grid shrink-0 grid-cols-1 focus-within:relative">
                     <select
                       id="currency"
                       name="currency"
                       aria-label="Currency"
-                      class="col-start-1 row-start-1 w-full appearance-none rounded-md py-1.5 pr-7 pl-3 text-base text-gray-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                      className="col-start-1 row-start-1 w-full appearance-none rounded-md py-1.5 pr-7 pl-3 text-base text-gray-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
                     >
                       <option>USD</option>
                       <option>CAD</option>
                       <option>EUR</option>
                     </select>
                     <svg
-                      class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
+                      className="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
                       viewBox="0 0 16 16"
                       fill="currentColor"
                       aria-hidden="true"
@@ -112,10 +113,10 @@ function Home() {
                 <div className="mt-4 ">
                   <button
                     type="submit"
-                    class="w-full inline-flex items-center pl-32 py-2.5 px-3 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    className="w-full inline-flex items-center pl-32 py-2.5 px-3 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                   >
                     <svg
-                      class="w-4 h-4 me-2"
+                      className="w-4 h-4 me-2"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -137,8 +138,8 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="container">
-        <div className="aboutus m-8 grid grid-cols-2">
+      <div className="aboutus mt-12">
+        <div className="container grid grid-cols-2 aboutuscontent">
           <div>
             <img src="../Assets/g1.png" alt="headerlogo" />
           </div>
@@ -165,8 +166,8 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="container bg-sky-200">
-        <div className="choodeus grid grid-cols-2 gap-4 m-8  p-12">
+      <div className="choodeus bg-sky-200 mt-12">
+        <div className="container grid grid-cols-2 gap-4 choosecontent">
           <div className="mt-28">
             <div>
               <h1 className="font-bold text-3xl">Who Choose Us</h1>
@@ -216,62 +217,11 @@ function Home() {
         </div>
       </div>
       {/* start our project section */}
-      <section className="container">
-        <div className="ourproject m-8 pb-12">
-          <div className="text-center pt-12">
-            <h1 className="text-[#407cad] uppercase">Our Projects</h1>
-            <span className="font-bold text-3xl">Explore What We Offer</span>
-          </div>
-          <div className="grid grid-cols-3 gap-6 mt-28">
-            <div>
-              <img src="../Assets/img-1.png" alt="headerlogo" />
-              <div className="mt-4">
-                <span className="text-[#407cad] mt-5">Jan 20,2020</span>
-                <h1 className="mt-3 text-2xl">Nicoll Townhouse</h1>
-                <p className="mt-5">
-                  Reprehenderit nulla eu ad et erit nulla eu ad eterit nulla eu
-                  ad et
-                </p>
-                <span className="flex text-[#407cad] mt-3 font-semibold  ">
-                  View More <FaArrowRightLong className="mt-1.5 ml-2" />
-                </span>
-              </div>
-            </div>
-            <div>
-              <img src="../Assets/img-2.png" alt="headerlogo" />
-              <div className="mt-4">
-                <span className="text-[#407cad]">Jan 18,2020</span>
-                <h1 className="mt-3 text-2xl">Minus Deleniti</h1>
-                <p className="mt-5">
-                  Reprehenderit nulla eu ad et erit nulla eu ad eterit nulla eu
-                  ad et
-                </p>
-                <span className="flex text-[#407cad] mt-3 font-semibold ">
-                  View More <FaArrowRightLong className="mt-1.5 ml-2" />
-                </span>
-              </div>
-            </div>
-            <div>
-              <img src="../Assets/img-3.png" alt="headerlogo" />
-              <div className="mt-4">
-                <span className="text-[#407cad]">Jan 15,2020</span>
-                <h1 className="mt-3 text-2xl">Consequatur Dolorres</h1>
-                <p className="mt-5">
-                  Reprehenderit nulla eu ad et erit nulla eu ad eterit nulla eu
-                  ad et
-                </p>
-                <span className="flex text-[#407cad] mt-3 font-semibold ">
-                  View More <FaArrowRightLong className="mt-1.5 ml-2" />
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Swiperexample />
       {/* end our project section */}
       {/* start catagories section */}
-      <section className="container bg-black">
-        <div className="categories grid grid-cols-2 text-white m-8 pt-28 pb-28">
+      <section className="categories bg-black mt-12">
+        <div className="container grid grid-cols-2 text-white pt-28 pb-28 categoriescontent">
           <div className="w-[65%]">
             <span className="text-[#407cad] text-2xl">Categories</span>
             <h1 className=" font-bold text-3xl mb-5 mt-5">
@@ -282,7 +232,7 @@ function Home() {
               shortcode. you can list categories, types,cities,areas and states.
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-4 categoriesimages">
             <div>
               <img src="../Assets/img-2.png" alt="headerlogo" />
             </div>
@@ -297,15 +247,15 @@ function Home() {
       </section>
       {/* End catagories section */}
       {/* start our blogs section */}
-      <section className="container">
-        <div className="ourproject m-8 pb-12">
+      <section className="blogs">
+        <div className="container pb-12">
           <div className="text-center pt-12">
             <h1 className="text-[#407cad] uppercase">Our Blogs</h1>
             <span className="font-bold text-3xl">
               Explore Our News & Updates
             </span>
           </div>
-          <div className="grid grid-cols-3 gap-6 mt-28">
+          <div className="grid grid-cols-3 gap-6 mt-28 blogscontent">
             <div>
               <img src="../Assets/img-6.png" alt="headerlogo" />
               <div className="mt-4">
@@ -351,15 +301,15 @@ function Home() {
       {/* end our blogs section */}
 
       {/* start Testimonial section */}
-      <section className="container testimonialimg content-center">
-        <div className="testimonial m-8 pb-12">
+      <section className="testimonial testimonialimg content-center">
+        <div className="container pt-12 pb-12">
           <div className="text-center">
             <h1 className="text-[#407cad]">Testimonial</h1>
             <span className="font-bold text-3xl text-white">
               In The Words Of Our Clients
             </span>
           </div>
-          <div className="grid grid-cols-4 gap-4 mt-8">
+          <div className="grid grid-cols-4 gap-4 mt-8 testimonialcontent">
             <div className="bg-white p-8 justify-items-center">
               <img src="../Assets/qoute.png" alt="headerlogo" />
               <p className="mt-3 mb-3 text-center">
@@ -398,8 +348,8 @@ function Home() {
       {/* End Testimonial section */}
 
       {/* start image section */}
-      <section className="container">
-        <div className="images grid grid-cols-3 m-8">
+      <section className="images mt-12">
+        <div className="container grid grid-cols-3">
           <div className="border ">
             <img src="../Assets/partner1.png" alt="headerlogo" />
           </div>
@@ -423,8 +373,8 @@ function Home() {
       {/* end image section */}
 
       {/* start gallery section */}
-      <section className="container">
-        <div className="mt-12 m-8">
+      <section className="gallerysection mt-12">
+        <div className="container mt-12 m-8">
           <div className="galery grid grid-cols-2 ">
             <div>
               <h1 className="text-[#407cad]">Gallery</h1>
@@ -440,7 +390,7 @@ function Home() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-4 gap-4 mt-12">
+          <div className="grid grid-cols-4 gap-4 mt-12 galerycontent">
             <div>
               <img src="../Assets/img-1.png" alt="headerlogo" />
             </div>
@@ -457,6 +407,7 @@ function Home() {
         </div>
       </section>
       {/* End gallery section */}
+      <Footer />
     </>
   );
 }

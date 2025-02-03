@@ -9,8 +9,8 @@ import { MdEmail } from "react-icons/md";
 function HeaderContent() {
   return (
     <>
-      <div className="container">
-        <div className="flex justify-between m-8 bg-white mb-2.5 mt-2.5">
+      <div className="mt-5 headercontent">
+        <div className="container flex justify-between m-8 bg-white mb-2.5 mt-2.5">
           <div className="flex">
             <FaFacebookF className="mr-3" />
             <FaInstagram className="mr-3" />
