@@ -63,11 +63,30 @@ function Gallery() {
   const handlePageChange = (event, value) => {
     setCurrentPage(value);
   };
+  let corporategallery = data.filter(function (gallery) {
+    return gallery.type === "corporate";
+  });
+
+  let residentalgallery = data.filter(function (gallery) {
+    return gallery.type === "residental";
+  });
+
+  let luxapartmentgallery = data.filter(function (gallery) {
+    return gallery.type === "luxapartment";
+  });
+
+  let greenhousegallery = data.filter(function (gallery) {
+    return gallery.type === "greenhouse";
+  });
+
+  let officespacegallery = data.filter(function (gallery) {
+    return gallery.type === "officeplace";
+  });
 
   return (
     <>
       <div>
-        <div className="backgroundimagecontact opacity-10">
+        <div className="backgroundimagegallery">
           <div className="container ">
             <div className="text-white pt-[250px] text-center">
               <h1 className="[font:normal_normal_normal_52px/65px_Montserrat] tracking-[0.44px] text-[#2596be]">
@@ -95,9 +114,8 @@ function Gallery() {
                   <Tab label="Officespace" {...a11yProps(5)} />
                 </Tabs>
               </Box>
-
               <CustomTabPanel value={value} index={0}>
-                <div className="grid grid-cols-3 gap-5 mt-8 ">
+                <div className="grid grid-cols-3 gap-5 mt-8 galleryimg">
                   {currentItems.map((item) => (
                     <div key={item.id} className="bg-[#e9f7f7] mt-12">
                       <img
@@ -120,12 +138,125 @@ function Gallery() {
                   />
                 </div>
               </CustomTabPanel>
-
               <CustomTabPanel value={value} index={1}>
-                Item Two
+                <div className="grid grid-cols-3 gap-5 mt-8 galleryimg">
+                  {corporategallery.map((item) => (
+                    <div key={item.id} className="bg-[#e9f7f7] mt-12">
+                      <img
+                        src={item.image}
+                        alt="Gallery Item"
+                        className="w-full h-72 relative bottom-[40px]"
+                      />
+                      <h1 className="p-2.5 -mt-[26px]">{item.title}</h1>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="pagination">
+                  <Pagination
+                    count={totalPages}
+                    page={currentPage}
+                    onChange={handlePageChange}
+                    color="primary"
+                    className="pagination"
+                  />
+                </div>
               </CustomTabPanel>
               <CustomTabPanel value={value} index={2}>
-                Item Three
+                <div className="grid grid-cols-3 gap-5 mt-8 galleryimg">
+                  {residentalgallery.map((item) => (
+                    <div key={item.id} className="bg-[#e9f7f7] mt-12">
+                      <img
+                        src={item.image}
+                        alt="Gallery Item"
+                        className="w-full h-72 relative bottom-[40px]"
+                      />
+                      <h1 className="p-2.5 -mt-[26px]">{item.title}</h1>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="pagination">
+                  <Pagination
+                    count={totalPages}
+                    page={currentPage}
+                    onChange={handlePageChange}
+                    color="primary"
+                    className="pagination"
+                  />
+                </div>
+              </CustomTabPanel>
+              <CustomTabPanel value={value} index={3}>
+                <div className="grid grid-cols-3 gap-5 mt-8 galleryimg">
+                  {luxapartmentgallery.map((item) => (
+                    <div key={item.id} className="bg-[#e9f7f7] mt-12">
+                      <img
+                        src={item.image}
+                        alt="Gallery Item"
+                        className="w-full h-72 relative bottom-[40px]"
+                      />
+                      <h1 className="p-2.5 -mt-[26px]">{item.title}</h1>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="pagination">
+                  <Pagination
+                    count={totalPages}
+                    page={currentPage}
+                    onChange={handlePageChange}
+                    color="primary"
+                    className="pagination"
+                  />
+                </div>
+              </CustomTabPanel>
+              <CustomTabPanel value={value} index={4}>
+                <div className="grid grid-cols-3 gap-5 mt-8 galleryimg">
+                  {greenhousegallery.map((item) => (
+                    <div key={item.id} className="bg-[#e9f7f7] mt-12">
+                      <img
+                        src={item.image}
+                        alt="Gallery Item"
+                        className="w-full h-72 relative bottom-[40px]"
+                      />
+                      <h1 className="p-2.5 -mt-[26px]">{item.title}</h1>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="pagination">
+                  <Pagination
+                    count={totalPages}
+                    page={currentPage}
+                    onChange={handlePageChange}
+                    color="primary"
+                    className="pagination"
+                  />
+                </div>
+              </CustomTabPanel>
+              <CustomTabPanel value={value} index={5}>
+                <div className="grid grid-cols-3 gap-5 mt-8 galleryimg">
+                  {officespacegallery.map((item) => (
+                    <div key={item.id} className="bg-[#e9f7f7] mt-12">
+                      <img
+                        src={item.image}
+                        alt="Gallery Item"
+                        className="w-full h-72 relative bottom-[40px]"
+                      />
+                      <h1 className="p-2.5 -mt-[26px]">{item.title}</h1>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="pagination">
+                  <Pagination
+                    count={totalPages}
+                    page={currentPage}
+                    onChange={handlePageChange}
+                    color="primary"
+                    className="pagination"
+                  />
+                </div>
               </CustomTabPanel>
             </Box>
           </div>

@@ -7,6 +7,7 @@ import Gallery from "./Component/Gallery";
 import Contact from "./Component/Contact";
 import Blog from "./Component/Blog";
 import Swiperexample from "./Component/Swiper";
+import About from "./Component/About";
 
 function App() {
   return (
@@ -15,10 +16,11 @@ function App() {
         <Pageout />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/project" element={<Project />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/swiper" element={<Swiperexample />} />
         </Routes>
       </BrowserRouter>

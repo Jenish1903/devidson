@@ -6,12 +6,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --h1: "font-bold text-[#407cad] uppercase";
-  --span: "font-bold text-3xl"; 
-  --p: "[font:normal_normal_normal_15px/25px_Montserrat] tracking-[0.44px]"
-}
-
 .container {
   margin: 0 auto;
   width: 100%;
@@ -224,6 +218,9 @@ nav {
   .aboutwork, .commercialproject, .footer, .contact{
     padding: 30px;
   }
+  .gallerysection{
+    padding: 30px;
+  }
   .galleryimg{
     grid-template-columns: 100%;
   }
@@ -234,6 +231,15 @@ nav {
     grid-template-columns: 100%;
   }
   .resevation{
+    grid-template-columns: 100%;
+  }
+  .aboutcontent{
+    grid-template-columns: 100%;
+  }
+  .chooseimg{
+    flex-direction: column;
+  }
+  .ourvisioncontent{
     grid-template-columns: 100%;
   }
 }
@@ -321,7 +327,7 @@ i {
   opacity: 0.65;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .footerlist {
     grid-template-columns: 100%;
     text-align: center;
@@ -338,15 +344,14 @@ i {
   /* code */
 }
 
-
-.backgroundimageproject {
+.backgroundimageproject, .backgroundimagecontact, .backgroundimageblog {
   height: 100vh;
   width: 100%;
   background-image: url(../public/Assets/bg2.png);
   background-size: cover;
   background-position: center;
   background-color: #121d27;
-  opacity: 1;
+  opacity: 1
 }
 .swiper-pagination {
   margin-top: 20px !important; /* Adjust margin as needed */
@@ -360,7 +365,6 @@ i {
   margin-right: 60px;
 }
 .backgroundimagegallery {
-  position: relative;
   height: 100vh;
   width: 100%;
   background-image: url(../public/Assets/bg3.png);
@@ -376,16 +380,6 @@ i {
   margin-top: 10px;
 }
 
-.backgroundimagecontact {
-  height: 100vh;
-  width: 100%;
-  background-image: url(../public/Assets/bg2.png);
-  background-size: cover;
-  background-position: center;
-  background-color: #121d27;
-  opacity: 1;
-}
-
 .backgroundimageblog {
   height: 100vh;
   width: 100%;
@@ -394,4 +388,9 @@ i {
   background-position: center;
   background-color: #121d27;
   opacity: 1;
+}
+
+.Mui-selected{
+  color: black !important;
+  background: #2596be !important;
 }

@@ -3,6 +3,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { GoPlus } from "react-icons/go";
 import Footer from "./Footer";
 import Swiperexample from "./Swiperexample";
+import Tab_Bar from "./Tab_Bar";
 function Home() {
   return (
     <>
@@ -54,7 +55,7 @@ function Home() {
               </div>
             </div>
             <div className="w-[55%] ml-28 heroright">
-              <div className="">
+              {/* <div className="">
                 <button className="mr-3 ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                   For Rent
                 </button>
@@ -133,7 +134,8 @@ function Home() {
                     Search
                   </button>
                 </div>
-              </div>
+              </div> */}
+              <Tab_Bar />
             </div>
           </div>
         </div>

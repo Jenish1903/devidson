@@ -65,6 +65,17 @@ function Blog() {
     setCurrentPage(value);
   };
 
+  let projectsblogs = data.filter(function (blogs) {
+    return blogs.type === "projects";
+  });
+
+  let achievementblogs = data.filter(function (blogs) {
+    return blogs.type === "achievement";
+  });
+
+  let newsupdates = data.filter(function (blogs) {
+    return blogs.type === "newsupdates";
+  });
   return (
     <>
       <div>
@@ -126,10 +137,91 @@ function Blog() {
               </CustomTabPanel>
 
               <CustomTabPanel value={value} index={1}>
-                Item Two
+                <div className="grid grid-cols-3 gap-5 mt-8 blogcontent">
+                  {projectsblogs.map((item) => (
+                    <div key={item.id} className="mt-12">
+                      <img
+                        src={item.image}
+                        alt="Gallery Item"
+                        className="w-full -mb-[15px] h-72 relative bottom-[40px]"
+                      />
+                      <span className="">{item.title}</span>
+                      <p className="font-semibold">{item.description}</p>
+                      <Link to="#" className="flex mt-3">
+                        Read More
+                        <MdArrowRightAlt className="mt-1.5 ml-2 text-[#407cad]" />
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="pagination">
+                  <Pagination
+                    count={totalPages}
+                    page={currentPage}
+                    onChange={handlePageChange}
+                    color="primary"
+                    className="pagination"
+                  />
+                </div>
               </CustomTabPanel>
               <CustomTabPanel value={value} index={2}>
-                Item Three
+                <div className="grid grid-cols-3 gap-5 mt-8 blogcontent">
+                  {achievementblogs.map((item) => (
+                    <div key={item.id} className="mt-12">
+                      <img
+                        src={item.image}
+                        alt="Gallery Item"
+                        className="w-full -mb-[15px] h-72 relative bottom-[40px]"
+                      />
+                      <span className="">{item.title}</span>
+                      <p className="font-semibold">{item.description}</p>
+                      <Link to="#" className="flex mt-3">
+                        Read More
+                        <MdArrowRightAlt className="mt-1.5 ml-2 text-[#407cad]" />
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="pagination">
+                  <Pagination
+                    count={totalPages}
+                    page={currentPage}
+                    onChange={handlePageChange}
+                    color="primary"
+                    className="pagination"
+                  />
+                </div>
+              </CustomTabPanel>
+              <CustomTabPanel value={value} index={3}>
+                <div className="grid grid-cols-3 gap-5 mt-8 blogcontent">
+                  {newsupdates.map((item) => (
+                    <div key={item.id} className="mt-12">
+                      <img
+                        src={item.image}
+                        alt="Gallery Item"
+                        className="w-full -mb-[15px] h-72 relative bottom-[40px]"
+                      />
+                      <span className="">{item.title}</span>
+                      <p className="font-semibold">{item.description}</p>
+                      <Link to="#" className="flex mt-3">
+                        Read More
+                        <MdArrowRightAlt className="mt-1.5 ml-2 text-[#407cad]" />
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="pagination">
+                  <Pagination
+                    count={totalPages}
+                    page={currentPage}
+                    onChange={handlePageChange}
+                    color="primary"
+                    className="pagination"
+                  />
+                </div>
               </CustomTabPanel>
             </Box>
           </div>
