@@ -98,6 +98,10 @@ function Blog() {
                   value={value}
                   onChange={handleChange}
                   aria-label="basic tabs example"
+                  variant="scrollable"
+                  scrollButtons="auto"
+                  allowScrollButtonsMobile
+                  centered
                 >
                   <Tab label="All" {...a11yProps(0)} />
                   <Tab label="Projects" {...a11yProps(1)} />

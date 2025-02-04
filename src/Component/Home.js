@@ -3,7 +3,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { GoPlus } from "react-icons/go";
 import Footer from "./Footer";
 import Swiperexample from "./Swiperexample";
-import Tab_Bar from "./Tab_Bar";
+import TabBar from "./TabBar";
 function Home() {
   return (
     <>
@@ -135,7 +135,7 @@ function Home() {
                   </button>
                 </div>
               </div> */}
-              <Tab_Bar />
+              <TabBar />
             </div>
           </div>
         </div>
